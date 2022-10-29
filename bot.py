@@ -1,5 +1,10 @@
 import websocket, json
 
+minutes_processed = {}
+minute_candlesticks = []
+current_tick = None
+previous_tick = None
+
 def on_open(ws):
   print("Opened connection!")
 
@@ -17,8 +22,11 @@ def on_open(ws):
 
 
 def on_message(ws, message):
+  global current_tick, previous_tick
+
+  previous_tick = current_tick
+  current_tick = json.loads(message)
   print("Received message!")
-  print(json.loads(message))
 
 # accept user input for the product ID
 product_id = input("Enter a product ID: ")
