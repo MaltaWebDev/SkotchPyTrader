@@ -26,7 +26,9 @@ def on_message(ws, message):
 
   previous_tick = current_tick
   current_tick = json.loads(message)
-  print("Received message!")
+  print("===== received tick =====")
+  # print(current_tick)
+  print("{} @ {}".format(current_tick["price"], current_tick["time"]))
 
 # accept user input for the product ID
 product_id = input("Enter a product ID: ")
