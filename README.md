@@ -2,8 +2,8 @@
 
 ## Product brief
 
-- Accept user input from list of coin pairs.
-- Accept user input from a list of time frames.
+- Accept coin pair from user input.
+- Accept time frame from user input.
 - Open websocket connection with Coinbase.
 - Create candlestick chart from the data.
 - Look for BO pattern.
