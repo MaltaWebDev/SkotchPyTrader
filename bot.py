@@ -8,7 +8,7 @@ def on_open(ws):
     "channels": [
       {
         "name": "ticker", 
-        "product_ids": ["BTC-USD"]
+        "product_ids": [f"{product_id}"]
       }
     ]
   }
@@ -19,6 +19,13 @@ def on_open(ws):
 def on_message(ws, message):
   print("Received message!")
   print(json.loads(message))
+
+# accept user input for the product ID
+product_id = input("Enter a product ID: ")
+
+# accept user input for the timeframe
+timeframe = input("Enter a timeframe: ")
+
 
 socket = "wss://ws-feed.exchange.coinbase.com"
 
