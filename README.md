@@ -15,6 +15,6 @@
 - Take the m5 data from ws.
 - Identify breakout.
 - Identify high 2
-- - Identify high 2
+ - Identify high 2
 
 
